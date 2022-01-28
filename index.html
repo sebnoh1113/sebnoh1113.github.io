@@ -256,9 +256,7 @@ mjx-container[display="true"] + br {
 <p>다음의 AVL 트리에서 key 값 75를 삭제한 다음, 85를 삭제한 후의 AVL 트리</p>
 <p><img src="https://user-images.githubusercontent.com/84167756/151522359-ef5ad907-22f6-4a73-a4ba-340838762c40.png"></p>
 <p><img src="https://user-images.githubusercontent.com/84167756/151522413-fcdecce2-fb8e-47bc-a010-a370d02c438b.png"></p>
-<figure>
-<img src="https://user-images.githubusercontent.com/84167756/151522423-278e4522-1f61-4dcf-a8f5-da71399393b2.png" alt="9-2"><figcaption aria-hidden="true">9-2</figcaption>
-</figure>
+<p><img src="https://user-images.githubusercontent.com/84167756/151522423-278e4522-1f61-4dcf-a8f5-da71399393b2.png"></p>
 <h2 id="해시테이블">5. 해시테이블</h2>
 <p>키를 간단한 함수를 사용해 변환한 값을 배열의 인덱스로 이용하여 항목을 저장하는 것을 해싱(Hashing), 해싱에 사용되는 함수를 해시함수(Hash Function), 해시함수가 계산한 값을 해시값(Hash value), 항목이 해시값에 따라 저장되는 배열을 해시테이블(Hash Table)이라고 합니다.</p>
 <p>AVL 트리의 수행시간인 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex" xmlns="http://www.w3.org/2000/svg" width="8.346ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3689 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></g><g data-mml-node="mi" transform="translate(1450,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(1935,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z"></path></g><g data-mml-node="mi" transform="translate(2412,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(3300,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></span>보다 좋은 빠른 연산을 위해, 키와 1차원 리스트의 인덱스의 관계를 이용하여 키(항목)을 저장하되 키를 배열의 인덱스로 그대로 사용하면 메모리 낭비가 심해질 수 있으므로 해싱을 활용합니다.</p>
@@ -388,7 +386,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckyy7j9190000bcvi1b3zb7zy" data-title="3. 자료구조알고리즘" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckyy7peyg0000rwvif25fgzd3" data-title="3. 자료구조알고리즘" class="article-share-link">Share</a>
       
       
       
@@ -530,7 +528,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/18/title/" data-id="ckyy7j91l0003bcvihrzqd34b" data-title="2. 통계" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/18/title/" data-id="ckyy7peys0003rwvie602f6zt" data-title="2. 통계" class="article-share-link">Share</a>
       
       
       
@@ -621,7 +619,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckyy7j91n0004bcvi8vf86jzi" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckyy7pez50004rwvi21b6fxom" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Share</a>
       
       
       
@@ -666,7 +664,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/The-Beginning/" data-id="ckyy7j91h0001bcvi6i5b0txp" data-title="Posting List" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/05/26/The-Beginning/" data-id="ckyy7peyq0002rwvi1u346pf2" data-title="Posting List" class="article-share-link">Share</a>
       
       
       
@@ -718,7 +716,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckyy7j91k0002bcvi2i05gvh6" data-title="Hello Universe" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckyy7peyn0001rwvid45q9ljx" data-title="Hello Universe" class="article-share-link">Share</a>
       
       
       
