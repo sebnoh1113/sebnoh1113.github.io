@@ -208,7 +208,7 @@ mjx-container[display="true"] + br {
         <h2 id="기계학습이란">기계학습이란?</h2>
 <ul>
 <li>기계학습(Machine Learning)은 계산, 학습 등 인간의 지적능력을 컴퓨터를 통해 구현하는 기술인 인공지능(Artifical Intelligence) 에서도 특정 부분을 '스스로 학습'하여 성능을 향상시키는 기술을 의미합니다. 이 중 인간의 뉴런과 비슷한 인공신경망으로 정보를 처리하며 학습하는 방법을 딥러닝(Deepl Learning이라고 합니다.</li>
-<li>전통적인 프로그래밍에서는 사람이 '규칙'을 정하고 수정하였다면(ex. 1시간 운동할시 1kg 감소학 2시간 운동할시 2kg 체중 감소) 기계학습은 스스로 학습(데이터로부터 의사결정을 위한 패턴을 기계 스스로 학습)을 통해 '규칙'을 정하고 수정합니다(운동 시간 및 그에 따른 체중감소 데이터를 가지고 스스로 학습하여 몇 시간을 운동하면 체중이 얼마만큼 감소하는지 규칙을 정하고 새로운 데이터가 들어오면 이를 반영하여 규칙 조정).</li>
+<li>전통적인 프로그래밍에서는 사람이 '규칙'을 정하고 수정하였다면(ex. 1시간 운동할시 체중이 1kg 감소하고 2시간 운동할시 2kg 체중 감소) 기계학습은 스스로 학습(데이터로부터 의사결정을 위한 패턴을 기계 스스로 학습)을 통해 '규칙'을 정하고 수정합니다(운동 시간 및 그에 따른 체중감소 데이터를 가지고 스스로 학습하여 몇 시간을 운동하면 체중이 얼마만큼 감소하는지 규칙을 정하고 새로운 데이터가 들어오면 이를 반영하여 규칙 조정).</li>
 <li>여기서 '규칙'은 가중치(weight)와 절편(bias)을 뜻하며 이러한 가중치와 절편을 가진 수식을 모델이라고 합니다.</li>
 </ul>
 <h2 id="기계학습-분류">기계학습 분류</h2>
@@ -284,6 +284,15 @@ mjx-container[display="true"] + br {
 <li>세 개 이상의 클래스로 분류할 시에도 사용 가능하기는 하지만 기본적으로 이진분류기(Binary classifier입니다.</li>
 </ul>
 <p>(위 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex" xmlns="http://www.w3.org/2000/svg" width="2.034ex" height="1.357ex" role="img" focusable="false" viewBox="0 -442 899 599.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mi" transform="translate(605,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container></span> 와 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex" xmlns="http://www.w3.org/2000/svg" width="1.62ex" height="1.027ex" role="img" focusable="false" viewBox="0 -443 716 454"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path></g></g></g></svg></mjx-container></span> 는 백터 입니다.)</p>
+<h3 id="나이브-베이즈-분류-naive-bayesian-지도학습">나이브 베이즈 분류 (Naive Bayesian) &lt;분류&gt; (지도학습)</h3>
+<h3 id="서포트-벡터-머신-support-vector-machine-분류-회귀-지도학습">서포트 벡터 머신 (Support Vector Machine) &lt;분류, 회귀&gt; (지도학습)</h3>
+<h3 id="결정-트리-decision-tree-분류-회귀-지도학습">결정 트리 (Decision Tree) &lt;분류, 회귀&gt; (지도학습)</h3>
+<h3 id="랜덤-포레스트-random-forests-분류-회귀-지도학습">랜덤 포레스트 (Random Forests) &lt;분류, 회귀&gt; (지도학습)</h3>
+<h3 id="k-평균-알고리즘k-means-비지도학습">k-평균 알고리즘(k-Means) &lt;클러스터링&gt; (비지도학습)</h3>
+<h3 id="가우시안-혼합-모델gaussian-mixture-model-비지도학습">가우시안 혼합 모델(Gaussian Mixture Model) &lt;클러스터링&gt; (비지도학습)</h3>
+<h3 id="주성분분석principle-component-analysis-pca">주성분분석(Principle Component Analysis, PCA) &lt;차원축소&gt;</h3>
+<h3 id="히든-마르코프-모델-hidden-markov-model-hmm">히든 마르코프 모델 (Hidden Markov Model, HMM)</h3>
+<h3 id="유전-알고리즘-genetic-algorithm">유전 알고리즘 (Genetic Algorithm)</h3>
 <h2 id="모델-분석">모델 분석</h2>
 <h3 id="과대적합overfitting-vs.-일반화generalization">과대적합(Overfitting) vs. 일반화(Generalization)</h3>
 <ul>
@@ -293,37 +302,21 @@ mjx-container[display="true"] + br {
 </ul>
 <h3 id="모델-평가-model-evaluation">모델 평가 (Model Evaluation)</h3>
 <ul>
-<li><p>어떤 모델이 가장 좋은지를 판단하기 위해 여러 방법이 존재합니다.</p></li>
-<li><p>훈련 세트(Training Set)과 테스트 세트(Test Set)</p></li>
+<li>어떤 모델이 가장 좋은지를 판단하기 위해 여러 방법이 존재합니다.</li>
 </ul>
-<ol type="1">
-<li>주어진 데이터를 훈련 세트와 테스트 세트로 나눕니다 (두 세트는 겹쳐서는 아니되며 가능한 최대로 독립적이어야 합니다.)</li>
-<li>훈련 세트를 가지고 여러 모델들을 생성합니다.</li>
-<li>테스트 세트를 가지고 각 모델을 시험합니다.</li>
-<li>테스트 세트로 시험한 결과 가장 결과값이 좋은 모델을 최고의 모델로 선정합니다.</li>
-</ol>
+<p><strong>훈련 세트(Training Set)과 테스트 세트(Test Set)</strong> 1. 주어진 데이터를 훈련 세트와 테스트 세트로 나눕니다 (두 세트는 겹쳐서는 아니되며 가능한 최대로 독립적이어야 합니다.) 2. 훈련 세트를 가지고 여러 모델들을 생성합니다. 3. 테스트 세트를 가지고 각 모델을 시험합니다. 4. 테스트 세트로 시험한 결과 가장 결과값이 좋은 모델을 최고의 모델로 선정합니다.</p>
 <p>그런데 위 방법은 테스트 세트가 모델 생성에 사용되지 않으므로 데이터 낭비가 발생하고, 훈련 세트와 테스트 세트 분리가 무작위로 이루어 짐에 따라 어떻게 분리되었는지에 따라 결과에 큰 차이가 발생할 우려가 존재합니다.</p>
+<p><strong>K-폴드 교차 검증(K-Fold Cross Validation)</strong> 1. 데이터를 k개의 그룹으로 나눕니다.(서로 겹치면 안 됨) 2. k개의 그룹을 k-1개의 훈련 세트와 1개의 테스트 세트로 구성하는데, 총 k개의 훈련세트/테스트세트 구성이 나옵니다(K개의 각 그룹이 한번씩은 테스트 세트가 된다고 생각하면 됩니다). 3. k개 구성의 각 결과값들의 평균값을 통해 최고의 모델을 선정합니다.</p>
+<p><strong>LOOCV (Leave-One-Out Cross Validation)</strong> 1. K-폴드 교차검증의 극단의 방법으로 만약 데이터 사이즈가 n개라면 k=n 입니다. 2. 단 하나의 데이터 포인트를 제외한 나머지 데이터 전부(n-1개)를 훈련에 사용하고, 제외한 하나의 데이터 포인트만을 테스트에 활용합니다. 3. 이를 n번 반복합니다.</p>
+<h2 id="제약조건-하의-최적화-constrained-optimization">제약조건 하의 최적화 (Constrained Optimization)</h2>
 <ul>
-<li>K-폴드 교차 검증(K-Fold Cross Validation)</li>
+<li>Dual Form (LSVM에서도 참조)</li>
 </ul>
-<ol type="1">
-<li>데이터를 k개의 그룹으로 나눕니다.(서로 겹치면 안 됨)</li>
-<li>k개의 그룹을 k-1개의 훈련 세트와 1개의 테스트 세트로 구성하는데, 총 k개의 훈련세트/테스트세트 구성이 나옵니다(K개의 각 그룹이 한번씩은 테스트 세트가 된다고 생각하면 됩니다).</li>
-<li>k개 구성의 각 결과값들의 평균값을 통해 최고의 모델을 선정합니다.</li>
-</ol>
-<ul>
-<li>LOOCV (Leave-One-Out Cross Validation)</li>
-</ul>
-<ol type="1">
-<li>K-폴드 교차검증의 극단의 방법으로 만약 데이터 사이즈가 n개라면 k=n 입니다.</li>
-<li>단 하나의 데이터 포인트를 제외한 나머지 데이터 전부(n-1개)를 훈련에 사용하고, 제외한 하나의 데이터 포인트만을 테스트에 활용합니다.</li>
-<li>이를 n번 반복합니다.</li>
-</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/03/4-%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/" data-id="ckz6rfehi0000a8vialik4ai2" data-title="4. 기계학습" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/03/4-%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/" data-id="ckz6si88n00018cviekq6bpah" data-title="4. 기계학습" class="article-share-link">Share</a>
       
       
       
@@ -543,7 +536,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckz6rfehp0001a8vi3v8fb6sc" data-title="3. 자료구조알고리즘" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckz6si88g00008cvi0k84hapk" data-title="3. 자료구조알고리즘" class="article-share-link">Share</a>
       
       
       
@@ -685,7 +678,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/18/title/" data-id="ckz6rfei00005a8vidwjo3ohw" data-title="2. 통계" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/18/title/" data-id="ckz6si88z00048cvi1gaagq8i" data-title="2. 통계" class="article-share-link">Share</a>
       
       
       
@@ -776,7 +769,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckz6rfehz0004a8vih6wzcs81" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckz6si89100058cvieamzafi9" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Share</a>
       
       
       
@@ -821,7 +814,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/The-Beginning/" data-id="ckz6rfehw0002a8vi81hgck9g" data-title="Posting List" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/05/26/The-Beginning/" data-id="ckz6si88r00028cvi5i6eai5c" data-title="Posting List" class="article-share-link">Share</a>
       
       
       
@@ -873,7 +866,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckz6rfehx0003a8vibgfr8dqt" data-title="Hello Universe" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckz6si88x00038cvi7menetbn" data-title="Hello Universe" class="article-share-link">Share</a>
       
       
       
