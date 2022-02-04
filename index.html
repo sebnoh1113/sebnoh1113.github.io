@@ -210,7 +210,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/04/%EC%98%A4%EC%B0%A8%EC%97%AD%EC%A0%84%ED%8C%8C-%EB%8D%A7%EC%85%88-%EB%85%B8%EB%93%9C-%EA%B3%B1%EC%85%88-%EB%85%B8%EB%93%9C/" data-id="ckz7xly640006qkvidyqk8dza" data-title="오차역전파, 덧셈 노드, 곱셈 노드" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/04/%EC%98%A4%EC%B0%A8%EC%97%AD%EC%A0%84%ED%8C%8C-%EB%8D%A7%EC%85%88-%EB%85%B8%EB%93%9C-%EA%B3%B1%EC%85%88-%EB%85%B8%EB%93%9C/" data-id="ckz7ywdvj0006l4vi3w74cj0o" data-title="오차역전파, 덧셈 노드, 곱셈 노드" class="article-share-link">Teilen</a>
       
       
       
@@ -371,7 +371,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/03/4-%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/" data-id="ckz7xly5g0000qkvi56nbfd4t" data-title="4. 기계학습" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/03/4-%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/" data-id="ckz7ywdvc0002l4vi8yu42u3f" data-title="4. 기계학습" class="article-share-link">Teilen</a>
       
       
       
@@ -455,7 +455,13 @@ mjx-container[display="true"] + br {
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 상향식 힙 생성</span></span><br><span class="line"><span class="comment"># 키들이 미리 한꺼번에 주어지며 이들을 주어진 순서대로 초기 배열에 저장</span></span><br><span class="line"><span class="comment"># 초기 배열에 저장된 키들을 상향식으로 재배치하여 힙 생성</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">bottom_up_Heap</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span> (<span class="params">self</span>):</span></span><br><span class="line">        self.heap=[]</span><br><span class="line">        self.heap.append(<span class="number">0</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Left</span>(<span class="params">self, i</span>):</span> <span class="keyword">return</span> <span class="built_in">int</span>(self.heap[i*<span class="number">2</span>])</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Right</span>(<span class="params">self, i</span>):</span> <span class="keyword">return</span> <span class="built_in">int</span>(self.heap[i*<span class="number">2</span>+<span class="number">1</span>])</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">heap2</span>(<span class="params">self,k,n</span>):</span></span><br><span class="line">        self.heap=self.heap+k</span><br><span class="line">        i=<span class="built_in">int</span>(n)</span><br><span class="line">        p = i // <span class="number">2</span></span><br><span class="line">        <span class="keyword">while</span> p &gt;= <span class="number">1</span>:</span><br><span class="line">            parent = p</span><br><span class="line">            child = p * <span class="number">2</span></span><br><span class="line">            p_node = <span class="built_in">int</span>(self.heap[p])</span><br><span class="line">            <span class="keyword">while</span> child &lt;= i:</span><br><span class="line">                <span class="keyword">if</span> child &lt; i <span class="keyword">and</span> self.Left(parent) &lt; self.Right(parent):</span><br><span class="line">                    child += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> p_node &lt; <span class="built_in">int</span>(self.heap[child]):</span><br><span class="line">                    self.heap[parent] = self.heap[child]</span><br><span class="line">                    parent = child</span><br><span class="line">                    child *= <span class="number">2</span></span><br><span class="line">            self.heap[parent] = p_node</span><br><span class="line">            p=p-<span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'  '</span>, end=<span class="string">''</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> self.heap[<span class="number">1</span>:]:</span><br><span class="line">            <span class="built_in">print</span>(i, end=<span class="string">' '</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    heap = bottom_up_Heap()</span><br><span class="line">    num_key, key_contents = <span class="built_in">input</span>(<span class="string">'키 개수(100개 미만):'</span>), <span class="built_in">input</span>(<span class="string">'키 내용(중복이 없는 1이상의 정수):'</span>)</span><br><span class="line">    data = key_contents.split(<span class="string">' '</span>)</span><br><span class="line">    heap.heap2(data,num_key)</span><br></pre></td></tr></table></figure>
 <h3 id="avl-트리는-모든-노드에서-왼쪽-서브트리의-높이-차가-1을-넘지-않는-이진탐색트리로-모든-노드의-균형-인수는-0이나-1--1이-되어야-합니다.-이를-위해-ll-회전-lr-회전-rr-회전-rl-회전의-방법을-통해-재균형을-맞춥니다.">AVL 트리는 모든 노드에서 왼쪽 서브트리의 높이 차가 1을 넘지 않는 이진탐색트리로 모든 노드의 균형 인수는 0이나 +1, -1이 되어야 합니다. 이를 위해 LL 회전, LR 회전, RR 회전, RL 회전의 방법을 통해 재균형을 맞춥니다.</h3>
 <p><strong>AVL 트리의 균형이 깨지는 4가지 경우</strong></p>
-<p>-삽입된 노드 N으로부터 가장 가까우면서 균형 인수가 $$2가 된 조상 노드가 A라면 1. LL타입: N이 A의 왼쪽서브트리의 왼쪽서브트리에 삽입 2. LR타입: N이 A의 왼쪽서브트리의 오른쪽서브트리에 삽입 3. RR타입: N이 A의 오른쪽서브트리의 오른쪽서브트리에 삽입 4. RL타입: N이 A의 오른쪽서브트리의 왼쪽서브트리에 삽입</p>
+<p>-삽입된 노드 N으로부터 가장 가까우면서 균형 인수가 $$2가 된 조상 노드가 A라면</p>
+<ol type="1">
+<li>LL타입: N이 A의 왼쪽서브트리의 왼쪽서브트리에 삽입</li>
+<li>LR타입: N이 A의 왼쪽서브트리의 오른쪽서브트리에 삽입</li>
+<li>RR타입: N이 A의 오른쪽서브트리의 오른쪽서브트리에 삽입</li>
+<li>RL타입: N이 A의 오른쪽서브트리의 왼쪽서브트리에 삽입</li>
+</ol>
 <p><strong>각 타입별 재균형 방법</strong></p>
 <ol type="1">
 <li>LL회전: A부터 N까지의 경로상 노드의 오른쪽 회전</li>
@@ -600,7 +606,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckz7xly5n0001qkvife7ng57p" data-title="3. 자료구조알고리즘" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckz7ywdv00000l4viehbuangk" data-title="3. 자료구조알고리즘" class="article-share-link">Teilen</a>
       
       
       
@@ -742,7 +748,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/18/title/" data-id="ckz7xly5u0004qkvi3d135k4g" data-title="2. 통계" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/18/title/" data-id="ckz7ywdvh0005l4vihb45a1hl" data-title="2. 통계" class="article-share-link">Teilen</a>
       
       
       
@@ -833,7 +839,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckz7xly5v0005qkvi5n71411i" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckz7ywdvg0004l4vibklj3k3t" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Teilen</a>
       
       
       
@@ -878,7 +884,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/The-Beginning/" data-id="ckz7xly5q0002qkvih9z1d84m" data-title="Posting List" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/05/26/The-Beginning/" data-id="ckz7ywdv80001l4vi7rcwaeti" data-title="Posting List" class="article-share-link">Teilen</a>
       
       
       
@@ -930,7 +936,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckz7xly5s0003qkvi24ksbmmf" data-title="Hello Universe" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckz7ywdve0003l4viagkohz67" data-title="Hello Universe" class="article-share-link">Teilen</a>
       
       
       
