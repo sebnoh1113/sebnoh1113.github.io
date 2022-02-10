@@ -171,10 +171,10 @@ mjx-container[display="true"] + br {
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -283,7 +283,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/07/%EC%9E%90%EC%97%B0%EC%96%B4%EC%B2%98%EB%A6%AC/" data-id="ckzgsmwjy0007usvidm745jfc" data-title="5. 자연어처리" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/07/%EC%9E%90%EC%97%B0%EC%96%B4%EC%B2%98%EB%A6%AC/" data-id="ckzgw5d2900055wvi1umt4e1d" data-title="5. 자연어처리" class="article-share-link">Share</a>
       
       
       
@@ -317,7 +317,12 @@ mjx-container[display="true"] + br {
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>오차역전파(backward propagation of errors)를 이해하는 방법은 1.수식을 통하여 2. 복수의 노드(node)와 에지(edge)로 표현된 그래프 자료구조를 통하여 이해하는 방법 두 가지가 존재합니다.</p>
+        <ul>
+<li>미분 계산에 있어 컴퓨터는 극한을 취할 수 없어 극한과 비슷한 값인 0.0001(=1e-4)와 같은 매우 작은 값을 이용하여 계산합니다. 이런 미세한 차이를 이용하여 함수의 변화량을 구하는 방법을 수치미분(numerical differentiation)이라고 합니다.</li>
+<li>그러나 수치 미분의 결과에는 오차가 포함되어 있어 경우에 따라 그 오차가 커질 수 있는 문제와 더욱 심각한 문제로 변수가 여러 개인 계산을 미분할 경우 변수 각각을 미분해야 하기 때문에 계산량이 많다는 문제가 있습니다.</li>
+<li>이와 같은 문제점을 해결하여 미분의 결과값이 보다 정확하고 효율적으로 미분 계산을 할 수 있게 한 것이 바로 역전파입니다.(수치 미분은 역전파를 정확하게 구현했는지 확인하기 위한 즉, 기울기 확인(gradient checking) 용도로 활용합니다.)</li>
+<li>오차역전파(backward propagation of errors)를 이해하는 방법은 1.수식을 통하여 2. 복수의 노드(node)와 에지(edge)로 표현된 그래프 자료구조를 통하여 이해하는 방법 두 가지이며 본 포스팅에서는 그래프 계산 그래프를 활용하여 이해해보도록 하겠습니다.</li>
+</ul>
 <h2 id="계산-그래프-computational-graph">계산 그래프 (Computational Graph)</h2>
 <p>계산 그래프의 특징은 각 노드가 자신과 직접 관련된 작은 범위인 '국소적 계산'을 전파함으로써 최종 결과를 얻는다는 점에 있습니다(예를 들어 덧셈 노드라면 단순히 더해질 두 숫자에 관심이 있을뿐, 어떻게 그 숫자가 도출되었는지는 관심이 없습니다). 그리고 계산 그래프는 중간 계산 결과를 모두 보관합니다.</p>
 <p>이와 같은 국소적 계산은 단순하나, 그 결과를 전달함으로써 전체를 구성하는 복잡한 계산이 가능해 집니다. 그리고 역전파를 통해 '국소적 미분'을 오른쪽에서 왼쪽으로 역으로 전달하여 중간까지의 미분 결과를 공유할 수 있는바 다수의 '미분'을 효율적으로 계산할 수 있습니다.</p>
@@ -408,7 +413,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/04/%EC%98%A4%EC%B0%A8%EC%97%AD%EC%A0%84%ED%8C%8C-%EB%8D%A7%EC%85%88-%EB%85%B8%EB%93%9C-%EA%B3%B1%EC%85%88-%EB%85%B8%EB%93%9C/" data-id="ckzgsmwjw0006usvi0c7030n8" data-title="계산 그래프로 이해한 오차역전파(덧셈 노드, 곱셈 노드)" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/04/%EC%98%A4%EC%B0%A8%EC%97%AD%EC%A0%84%ED%8C%8C-%EB%8D%A7%EC%85%88-%EB%85%B8%EB%93%9C-%EA%B3%B1%EC%85%88-%EB%85%B8%EB%93%9C/" data-id="ckzgw5d2b00065wvi0kov5m3i" data-title="계산 그래프로 이해한 오차역전파(덧셈 노드, 곱셈 노드)" class="article-share-link">Share</a>
       
       
       
@@ -569,7 +574,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/03/4-%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/" data-id="ckzgsmwjl0001usvidqbj9b1f" data-title="4. 기계학습" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/03/4-%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/" data-id="ckzgw5d1z00015wvick6mh221" data-title="4. 기계학습" class="article-share-link">Share</a>
       
       
       
@@ -657,7 +662,7 @@ mjx-container[display="true"] + br {
 <li>그리고 이진탐색트리란 효율적인 탐색을 위한 이진트리 기반의 자료구조로 모든 노드는 유일한 키를 가집니다. 또한 왼쪽 서브트리의 키들은 루트의 키보다 작고 오른쪽 서브트리의 키들은 루트의 키보다 크며 왼쪽과 오른쪽 서브트리 역시 이진탐색트리입니다.</li>
 <li>탐색트리의 탐색 연산은 키를 이용하여 부모노드의 키보다 작으면 왼쪽 자식부터, 크다면 오른쪽 자식부터 반복하여 탐색합니다.</li>
 <li>탐색트리의 삽입 연산은 탐색에 실패한 위치가 곧 노드를 삽입해야 할 위치가 됩니다.</li>
-<li>삭제 연산은 삭제하려는 노드가 단말 노드일 경우 그 노드만 삭제하고, 삭제하려는 노드가 하나의 왼쪽이나 오른쪽 서브 트리중 하나만 가지고 있는 경우 삭제 노드의 자식 노드를 부모 노드에 연결하며, 삭제하려는 노드가 양쪽 모두 서브트리를 가지고 있는 경우 삭제할 위치에 왼쪽 서브트리의 가장 큰 노드나 오른쪽 서브트리의 가장 작은 노드 즉 가장 비슷한 값을 가진 노드를 삭제 위치로 가져옵니다.</li>
+<li>삭제 연산은 삭제하려는 노드가 단말 노드일 경우 그 노드만 삭제하고, 삭제하려는 노드가 왼쪽이나 오른쪽 서브 트리중 하나만 가지고 있는 경우 삭제 노드의 자식 노드를 부모 노드에 연결하며, 삭제하려는 노드가 양쪽 모두 서브트리를 가지고 있는 경우 삭제할 위치에 왼쪽 서브트리의 가장 큰 노드나 오른쪽 서브트리의 가장 작은 노드 즉 가장 비슷한 값을 가진 노드를 삭제 위치로 가져옵니다.</li>
 <li>이진탐색트리의 성능 즉 탐색, 삽입, 삭제 연산의 시간은 트리의 높이에 비례합니다.</li>
 <li>AVL 트리(균형이진탐색트리)는 트리 높이를 조정하여 시간복잡도를 개선한 것입니다. AVL 트리는 모든 노드에서 왼쪽 서브트리와 오른쪽 서브트리의 높이 차가 1을 넘지 않는 이진탐색트리이며 모든 노드의 균형 인수는 0이나 +1, -1이 되어야 합니다. 삭입과 삭제 시 균형 상태가 깨질 수 있기에 LL 회전, LR 회전, RR 회전, RL 회전의 방법을 통해 재균형을 맞춥니다.</li>
 </ul>
@@ -832,7 +837,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckzgsmwjc0000usvici9oh6xn" data-title="3. 자료구조알고리즘" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckzgw5d1j00005wvi6mbp5hxf" data-title="3. 자료구조알고리즘" class="article-share-link">Share</a>
       
       
       
@@ -974,7 +979,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/18/title/" data-id="ckzgsmwjs0003usvi3gu4chzs" data-title="2. 통계" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/18/title/" data-id="ckzgw5d2600045wvi36bs85d7" data-title="2. 통계" class="article-share-link">Share</a>
       
       
       
@@ -1065,7 +1070,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckzgsmwjv0005usvi3hgk2akf" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckzgw5d2d00075wvihx8v7nhk" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Share</a>
       
       
       
@@ -1110,7 +1115,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/The-Beginning/" data-id="ckzgsmwjo0002usvibort4jni" data-title="Posting List" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/05/26/The-Beginning/" data-id="ckzgw5d2200025wvi8v05c6vt" data-title="Posting List" class="article-share-link">Share</a>
       
       
       
@@ -1162,7 +1167,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckzgsmwju0004usvi7dpl9efx" data-title="Hello Universe" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckzgw5d2400035wvi9jc62fm3" data-title="Hello Universe" class="article-share-link">Share</a>
       
       
       
@@ -1190,7 +1195,7 @@ mjx-container[display="true"] + br {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li></ul>
     </div>
@@ -1200,7 +1205,7 @@ mjx-container[display="true"] + br {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
