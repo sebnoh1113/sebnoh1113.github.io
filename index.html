@@ -212,7 +212,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/15/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-Pytorch/" data-id="ckzwe6ryf0008skvi1f5udct5" data-title="6. 파이토치(Pytorch)" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/15/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-Pytorch/" data-id="ckzwfg4hz0007ocvihyoycidq" data-title="6. 파이토치(Pytorch)" class="article-share-link">Teilen</a>
       
       
       
@@ -324,7 +324,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/07/%EC%9E%90%EC%97%B0%EC%96%B4%EC%B2%98%EB%A6%AC/" data-id="ckzwe6rye0007skvih7p805zy" data-title="5. 자연어처리" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/07/%EC%9E%90%EC%97%B0%EC%96%B4%EC%B2%98%EB%A6%AC/" data-id="ckzwfg4i00008ocviaylf599g" data-title="5. 자연어처리" class="article-share-link">Teilen</a>
       
       
       
@@ -452,14 +452,12 @@ mjx-container[display="true"] + br {
 <li>순전파 때의 입력인 x가 0보다 크면 역전파는 상류의 값을 그대로 하류로 흘리는 반면 x가 0 이하면 역전파 때는 하류로 신호를 보내지 않습니다(0을 보냅니다.)</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Relu</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.mask=<span class="literal">None</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, x</span>):</span> <span class="comment"># x가 넘파이 어레이 배열</span></span><br><span class="line">        self.mask = (x&lt;=<span class="number">0</span>) <span class="comment"># x의 원소 값이 0 이하의 인덱스는 True, 그 외는 False</span></span><br><span class="line">        out = x.copy()</span><br><span class="line">        out[self.mask] = <span class="number">0</span> <span class="comment"># x의 원소 값이 0 이하일 경우 0, 그 외에는 원래 x의 원소값 유지</span></span><br><span class="line">        <span class="keyword">return</span> out</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backward</span>(<span class="params">self, dout</span>):</span></span><br><span class="line">        dout[self.mask] = <span class="number">0</span>  <span class="comment"># 순전파 때의 입력값이 0 이하면 역전파 때의 값은 0</span></span><br><span class="line">        dx = dout</span><br><span class="line">        <span class="keyword">return</span> dx</span><br></pre></td></tr></table></figure>
-<ul>
-<li>머신러닝은 주로 대량의 매개변수를 입력받아서 마지막에 손실 함수(loss function)를 거쳐 출력을 산출하며 많은 경우 손실함수의 출력은 단일한 스칼라값입니다. 이 값이 중요 요소로 손실 함수의 각 매개변수에 대한 미분을 계산해야 하며 미분값을 출력에서 입력 방향으로 전파하면 한 번의 전파만으로 모든 매개변수에 대한 미분을 효율적으로 계산할 수 있는바 역전파를 이용합니다.</li>
-</ul>
+<p><strong>머신러닝은 주로 대량의 매개변수를 입력받아서 마지막에 손실 함수(loss function)를 거쳐 출력을 산출하며 많은 경우 손실함수의 출력은 단일한 스칼라값입니다. 이 값이 중요 요소로 손실 함수의 각 매개변수에 대한 미분을 계산해야 하며 미분값을 출력에서 입력 방향으로 전파하면 한 번의 전파만으로 모든 매개변수에 대한 미분을 효율적으로 계산할 수 있는바 역전파를 이용합니다.</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/04/%EC%98%A4%EC%B0%A8%EC%97%AD%EC%A0%84%ED%8C%8C-%EB%8D%A7%EC%85%88-%EB%85%B8%EB%93%9C-%EA%B3%B1%EC%85%88-%EB%85%B8%EB%93%9C/" data-id="ckzwe6ryc0006skvi0adgetxy" data-title="계산 그래프로 이해한 오차역전파(덧셈 노드, 곱셈 노드)" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/04/%EC%98%A4%EC%B0%A8%EC%97%AD%EC%A0%84%ED%8C%8C-%EB%8D%A7%EC%85%88-%EB%85%B8%EB%93%9C-%EA%B3%B1%EC%85%88-%EB%85%B8%EB%93%9C/" data-id="ckzwfg4hy0006ocvi9pg26go5" data-title="계산 그래프로 이해한 오차역전파(덧셈 노드, 곱셈 노드)" class="article-share-link">Teilen</a>
       
       
       
@@ -620,7 +618,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/03/4-%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/" data-id="ckzwe6rxw0001skvi1flkbhxi" data-title="4. 기계학습" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/02/03/4-%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/" data-id="ckzwfg4hq0001ocvid5wh13pb" data-title="4. 기계학습" class="article-share-link">Teilen</a>
       
       
       
@@ -883,7 +881,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckzwe6rxp0000skvidwct2ar4" data-title="3. 자료구조알고리즘" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/24/3-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" data-id="ckzwfg4h90000ocvifzjzcg4t" data-title="3. 자료구조알고리즘" class="article-share-link">Teilen</a>
       
       
       
@@ -1025,7 +1023,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/18/title/" data-id="ckzwe6ry30004skvi7t014xba" data-title="2. 통계" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/18/title/" data-id="ckzwfg4hx0005ocvi6swbdo3u" data-title="2. 통계" class="article-share-link">Teilen</a>
       
       
       
@@ -1116,7 +1114,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckzwe6ry40005skvi1a20erry" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2022/01/10/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98-Linear-Algebra/" data-id="ckzwfg4hw0004ocvi9nov823a" data-title="1. 선형대수 Linear Algebra" class="article-share-link">Teilen</a>
       
       
       
@@ -1161,7 +1159,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/Posting-List/" data-id="ckzwe6ry10003skvi45un5tlo" data-title="Posting List" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/05/26/Posting-List/" data-id="ckzwfg4hs0002ocvia39c6ufq" data-title="Posting List" class="article-share-link">Teilen</a>
       
       
       
@@ -1213,7 +1211,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckzwe6rxz0002skvif3990aq0" data-title="Hello Universe" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/05/26/hello-world/" data-id="ckzwfg4hu0003ocvigt5a0iqg" data-title="Hello Universe" class="article-share-link">Teilen</a>
       
       
       
